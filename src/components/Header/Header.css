@@ -72,6 +72,11 @@
   padding: 0;
 }
 
+.header__sign-in:hover {
+  cursor: pointer;
+  opacity: 60%;
+}
+
 .header__profile {
   color: #ffffff;
   height: 48px;

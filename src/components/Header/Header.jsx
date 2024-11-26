@@ -76,6 +76,7 @@ export default function Header(props) {
               className={`header__sign-in ${
                 props.useDarkTheme && "header__sign-in_theme_dark"
               }`}
+              onClick={props.openSignInModal}
             >
               Sign In
             </button>
