@@ -16,7 +16,8 @@ import SignUpSuccessPopup from "../SignUpSuccessPopup/SignUpSuccessPopup";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = React.useState(false);
-  const [hasSearched, setHasSearched] = React.useState(false);
+  const [isSearching, setIsSearching] = React.useState(false);
+  const [hasSearched, setHasSearched] = React.useState(true);
   const [useDarkTheme, setUseDarkTheme] = React.useState(false);
   const [currentUser, setCurrentUser] = React.useState({
     name: "Carver",
@@ -89,6 +90,7 @@ function App() {
               hasSearched={hasSearched}
               currentRoute={currentRoute}
               onSearch={onSearch}
+              isSearching={isSearching}
             />
           }
         />

@@ -26,7 +26,7 @@ export default function SignInPopup(props) {
         <input
           className="modal__form-input"
           type="email"
-          placeHolder="Enter Email"
+          placeholder="Enter Email"
         ></input>
       </label>
       <label className="modal__input-label modal__input-label_last">
@@ -34,7 +34,7 @@ export default function SignInPopup(props) {
         <input
           className="modal__form-input"
           type="password"
-          placeHolder="Enter Password"
+          placeholder="Enter Password"
         ></input>
       </label>
     </PopupWithForm>
