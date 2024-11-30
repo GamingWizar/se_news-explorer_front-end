@@ -17,8 +17,7 @@ import SignUpSuccessPopup from "../SignUpSuccessPopup/SignUpSuccessPopup";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = React.useState(false);
   const [isSearching, setIsSearching] = React.useState(false);
-  const [hasSearched, setHasSearched] = React.useState(true);
-  const [useDarkTheme, setUseDarkTheme] = React.useState(false);
+  const [hasSearched, setHasSearched] = React.useState(false);
   const [currentUser, setCurrentUser] = React.useState({
     name: "Carver",
     email: "example-email.com",
@@ -39,6 +38,21 @@ function App() {
     evt.preventDefault();
     setHasSearched(true);
     //Search with API
+  };
+
+  const handleSignIn = (evt) => {
+    evt.preventDefault();
+    setIsLoggedIn(true);
+    handleCloseModal();
+  };
+
+  const handleLogOut = (evt) => {
+    evt.preventDefault();
+    setIsLoggedIn(false);
+  };
+
+  const handleNavigateSaved = (evt) => {
+    setCurrentRoute("Saved");
   };
 
   React.useEffect(() => {
@@ -74,12 +88,14 @@ function App() {
     <CurrentUserContext.Provider value={{ currentUser }}>
       <Header
         isLoggedIn={isLoggedIn}
-        useDarkTheme={useDarkTheme}
+        currentRoute={currentRoute}
         activeTab={currentRoute}
         setCurrentRoute={setCurrentRoute}
         openSignInModal={() => {
           handleOpenModal("sign-in");
         }}
+        handleLogOut={handleLogOut}
+        handleNavigateSaved={handleNavigateSaved}
       />
       <Routes>
         <Route
@@ -108,6 +124,7 @@ function App() {
         swapModal={() => {
           handleOpenModal("sign-up");
         }}
+        handleSignIn={handleSignIn}
       />
       <SignUpPopup
         activeModal={activeModal}

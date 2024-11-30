@@ -6,3 +6,11 @@
   gap: 16px;
   width: 100%;
 }
+
+@media (max-width: 1030px) {
+  .news-card-list {
+    grid-template-columns: repeat(auto-fit, 224px);
+    gap: 8px;
+    width: 100%;
+  }
+}

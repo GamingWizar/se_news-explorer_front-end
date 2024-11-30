@@ -8,6 +8,7 @@ export default function SignInPopup(props) {
       modalType="sign-in"
       title="Sign in"
       submitText="Sign in"
+      onSubmit={props.handleSignIn}
       alternateButton={
         <p className="modal__form-swap-text">
           or{" "}
