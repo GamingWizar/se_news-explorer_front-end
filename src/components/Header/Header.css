@@ -99,7 +99,6 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
-  margin-left: 34px;
   margin: 0;
   max-width: 150px;
   white-space: nowrap;
@@ -211,7 +210,6 @@
   .header__profile-name {
     font-size: 16px;
     line-height: 24px;
-    margin-left: 15px;
     margin: 0;
     max-width: 150px;
     white-space: nowrap;
@@ -223,6 +221,27 @@
   }
   .header__profile-logout {
     margin-left: 13px;
+  }
+}
+
+@media (max-width: 650px) {
+  .header__content {
+    padding: 0 10px;
+  }
+  .header__saved {
+    margin-left: 10px;
+  }
+
+  .header__text-button {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .header__sign-in {
+    margin-left: 10px;
+  }
+  .header__profile {
+    margin-left: 10px;
   }
 }
 

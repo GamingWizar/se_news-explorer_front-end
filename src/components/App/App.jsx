@@ -17,13 +17,13 @@ import HeaderPopup from "../HeaderPopup/HeaderPopup";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = React.useState(true);
   const [isSearching, setIsSearching] = React.useState(false);
-  const [hasSearched, setHasSearched] = React.useState(true);
+  const [hasSearched, setHasSearched] = React.useState(false);
   const [currentUser, setCurrentUser] = React.useState({
     name: "Carver",
     email: "example-email.com",
     _id: "12345",
   });
-  const [currentRoute, setCurrentRoute] = React.useState("Saved");
+  const [currentRoute, setCurrentRoute] = React.useState("Home");
   const [activeModal, setActiveModal] = React.useState("");
 
   const handleCloseModal = () => {
