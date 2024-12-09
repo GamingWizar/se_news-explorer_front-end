@@ -9,21 +9,21 @@ import Header from "../Header/Header";
 import Main from "../Main/Main";
 import SavedNews from "../SavedNews/SavedNews";
 import Footer from "../Footer/Footer";
-import Preloader from "../Preloader/Preloader";
 import SignInPopup from "../SignInPopup/SignInPopup";
 import SignUpPopup from "../SignUpPopup/SignUpPopup";
 import SignUpSuccessPopup from "../SignUpSuccessPopup/SignUpSuccessPopup";
+import HeaderPopup from "../HeaderPopup/HeaderPopup";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = React.useState(false);
+  const [isLoggedIn, setIsLoggedIn] = React.useState(true);
   const [isSearching, setIsSearching] = React.useState(false);
-  const [hasSearched, setHasSearched] = React.useState(false);
+  const [hasSearched, setHasSearched] = React.useState(true);
   const [currentUser, setCurrentUser] = React.useState({
     name: "Carver",
     email: "example-email.com",
     _id: "12345",
   });
-  const [currentRoute, setCurrentRoute] = React.useState("Home");
+  const [currentRoute, setCurrentRoute] = React.useState("Saved");
   const [activeModal, setActiveModal] = React.useState("");
 
   const handleCloseModal = () => {
@@ -91,9 +91,8 @@ function App() {
         currentRoute={currentRoute}
         activeTab={currentRoute}
         setCurrentRoute={setCurrentRoute}
-        openSignInModal={() => {
-          handleOpenModal("sign-in");
-        }}
+        activeModal={activeModal}
+        openModal={handleOpenModal}
         handleLogOut={handleLogOut}
         handleNavigateSaved={handleNavigateSaved}
       />
@@ -132,6 +131,7 @@ function App() {
           handleOpenModal("sign-in");
         }}
       />
+      <HeaderPopup activeModal={activeModal} openModal={handleOpenModal} />
     </CurrentUserContext.Provider>
   );
 }

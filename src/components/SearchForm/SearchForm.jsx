@@ -10,16 +10,33 @@ export default function SearchForm(props) {
           account.
         </p>
         <form className="search-form__form" onSubmit={props.onSearch}>
-          <div className="search-form__search-bar">
-            <input
-              type="text"
-              className="search-form__input"
-              placeholder="Enter Topic"
-            ></input>
-            <button type="submit" className="search-form__submit">
-              Search
-            </button>
-          </div>
+          {window.innerWidth > 600 ? (
+            <>
+              <div className="search-form__search-bar">
+                <input
+                  type="text"
+                  className="search-form__input"
+                  placeholder="Enter Topic"
+                ></input>
+                <button type="submit" className="search-form__submit">
+                  Search
+                </button>
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="search-form__search-bar">
+                <input
+                  type="text"
+                  className="search-form__input"
+                  placeholder="Enter Topic"
+                ></input>
+              </div>
+              <button type="submit" className="search-form__submit">
+                Search
+              </button>
+            </>
+          )}
         </form>
       </div>
     </section>
