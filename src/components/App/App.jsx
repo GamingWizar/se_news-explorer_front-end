@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 
 import "./App.css";
 
@@ -15,7 +15,8 @@ import SignUpSuccessPopup from "../SignUpSuccessPopup/SignUpSuccessPopup";
 import HeaderPopup from "../HeaderPopup/HeaderPopup";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = React.useState(true);
+  let navigate = useNavigate();
+  const [isLoggedIn, setIsLoggedIn] = React.useState(false);
   const [isSearching, setIsSearching] = React.useState(false);
   const [hasSearched, setHasSearched] = React.useState(false);
   const [currentUser, setCurrentUser] = React.useState({
@@ -46,13 +47,19 @@ function App() {
     handleCloseModal();
   };
 
+  const handleNavigateSaved = (evt) => {
+    setCurrentRoute("Saved");
+    navigate("/saved-news");
+  };
+  const handleNavigateHome = (evt) => {
+    setCurrentRoute("Home");
+    navigate("/");
+  };
+
   const handleLogOut = (evt) => {
     evt.preventDefault();
     setIsLoggedIn(false);
-  };
-
-  const handleNavigateSaved = (evt) => {
-    setCurrentRoute("Saved");
+    handleNavigateHome();
   };
 
   React.useEffect(() => {
@@ -84,6 +91,8 @@ function App() {
     };
   }, [activeModal]);
 
+  React.useEffect(() => {}, []);
+
   return (
     <CurrentUserContext.Provider value={{ currentUser }}>
       <Header
@@ -95,6 +104,7 @@ function App() {
         openModal={handleOpenModal}
         handleLogOut={handleLogOut}
         handleNavigateSaved={handleNavigateSaved}
+        handleNavigateHome={handleNavigateHome}
       />
       <Routes>
         <Route
@@ -112,7 +122,11 @@ function App() {
         <Route
           path="/saved-news"
           element={
-            <SavedNews isLoggedIn={isLoggedIn} currentRoute={currentRoute} />
+            <SavedNews
+              isLoggedIn={isLoggedIn}
+              currentRoute={currentRoute}
+              setCurrentRoute={setCurrentRoute}
+            />
           }
         />
       </Routes>
@@ -131,7 +145,15 @@ function App() {
           handleOpenModal("sign-in");
         }}
       />
-      <HeaderPopup activeModal={activeModal} openModal={handleOpenModal} />
+      <HeaderPopup
+        activeModal={activeModal}
+        openModal={handleOpenModal}
+        isLoggedIn={isLoggedIn}
+        currentRoute={currentRoute}
+        handleNavigateSaved={handleNavigateSaved}
+        handleLogOut={handleLogOut}
+        handleNavigateHome={handleNavigateHome}
+      />
     </CurrentUserContext.Provider>
   );
 }

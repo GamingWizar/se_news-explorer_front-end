@@ -45,10 +45,21 @@
   width: 24px;
 }
 
-.header-modal__home {
+.header-modal__text-button {
+  background: none;
+  border: none;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 18px;
   line-height: 56px;
+  padding: 0;
   color: #ffffff;
-  margin-bottom: 22px;
+}
+
+.header-modal__tabs {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .header-modal__sign-in {
@@ -63,10 +74,45 @@
   font-size: 18px;
   line-height: 24px;
   padding: 0;
+  margin-top: 22px;
   margin-bottom: 8px;
 }
 
-.header-modal__sign-in:hover {
-  cursor: pointer;
-  opacity: 60%;
+.header-modal__profile {
+  color: #ffffff;
+  height: 48px;
+  background: none;
+  border-radius: 100px;
+  border: solid 1px #ffffff;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  margin-top: 10px;
+  align-self: center;
+}
+
+.header-modal__profile-name {
+  color: #ffffff;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0;
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header-modal__profile-logout {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: url(../../assets/logout.svg) center no-repeat;
+  margin-left: 15px;
+  padding: 0;
 }

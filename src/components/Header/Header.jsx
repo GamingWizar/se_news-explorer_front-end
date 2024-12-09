@@ -30,6 +30,7 @@ export default function Header(props) {
                 className={`header__text-button header__home ${
                   props.currentRoute === "Saved" && "header_theme_dark"
                 } ${props.currentRoute === "Home" && "header__tab_active"}`}
+                onClick={props.handleNavigateHome}
               >
                 Home
               </button>
@@ -63,11 +64,6 @@ export default function Header(props) {
                         props.currentRoute === "Saved" &&
                         "header__profile-logout_theme_dark"
                       }`}
-                      src={
-                        props.currentRoute === "Saved"
-                          ? logoutDark
-                          : logoutLight
-                      }
                     ></button>
                   </div>
                 </>

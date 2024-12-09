@@ -11,6 +11,9 @@ import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 
 export default function SavedNews(props) {
   const { currentUser } = React.useContext(CurrentUserContext);
+  React.useEffect(() => {
+    props.setCurrentRoute("Saved");
+  }, []);
   return (
     <div className=" page__section saved-news">
       <SavedNewsHeader currentUser={currentUser} />
