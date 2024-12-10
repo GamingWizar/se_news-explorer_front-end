@@ -169,7 +169,7 @@ function App() {
           }
         />
       </Routes>
-      <Footer />
+      <Footer handleNavigateHome={handleNavigateHome} />
       <SignUpSuccessPopup activeModal={activeModal} />
       <SignInPopup
         activeModal={activeModal}

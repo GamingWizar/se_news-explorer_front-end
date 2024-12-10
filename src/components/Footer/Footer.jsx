@@ -9,19 +9,32 @@ export default function Footer(props) {
         <>
           <p className="footer__text">© 2024 Supersite, Powered by News API</p>
           <div className="footer__section">
-            <button className="text-button footer__home" type="button">
+            <button
+              className="text-button footer__home"
+              type="button"
+              onClick={props.handleNavigateHome}
+            >
               Home
             </button>
-            <button className="text-button footer__tt" type="button">
+            <a
+              className="text-button footer__tt"
+              href="https://tripleten.com"
+              target="_blank"
+            >
               TripleTen
-            </button>
+            </a>
             <a
               className="footer__git"
               href="https://github.com/GamingWizar/se_news-explorer_front-end"
+              target="_blank"
             >
               <img className="footer__button-img" src={gitImg} />
             </a>
-            <a className="footer__facebook" href="https://facebook.com">
+            <a
+              className="footer__facebook"
+              href="https://facebook.com"
+              target="_blank"
+            >
               <img className="footer__button-img" src={facebookImg} />
             </a>
           </div>
