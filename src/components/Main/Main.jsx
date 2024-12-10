@@ -30,13 +30,17 @@ export default function Main(props) {
         onSearch={props.onSearch}
         hasSearched={props.hasSearched}
         isSearching={props.isSearching}
+        searchInput={props.searchInput}
+        setSearchInput={props.setSearchInput}
       />
       <SearchSection
         isLoggedIn={props.isLoggedIn}
         currentRoute={props.currentRoute}
-        cards={cards}
+        cards={props.searchResults}
         hasSearched={props.hasSearched}
         isSearching={props.isSearching}
+        displayAmount={props.displayAmount}
+        setDisplayAmount={props.setDisplayAmount}
       />
       <About />
     </main>

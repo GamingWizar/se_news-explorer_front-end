@@ -16,12 +16,17 @@ export default function SavedNews(props) {
   }, []);
   return (
     <div className=" page__section saved-news">
-      <SavedNewsHeader currentUser={currentUser} />
+      <SavedNewsHeader
+        currentUser={currentUser}
+        savedCards={props.savedCards}
+        setSavedCards={props.setSavedCards}
+      />
       <section className="saved-news__news-section">
         <NewsCardList
           isLoggedIn={props.isLoggedIn}
           currentRoute={props.currentRoute}
-          cards={cards}
+          cards={props.savedCards}
+          setSavedCards={props.setSavedCards}
         />
       </section>
     </div>
