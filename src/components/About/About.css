@@ -5,6 +5,7 @@
 .about__content {
   padding: 80px 104px;
   display: flex;
+  align-items: center;
 }
 
 .about__image {

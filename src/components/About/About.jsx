@@ -1,5 +1,5 @@
 import "./About.css";
-import aboutImg from "../../assets/avatar_temp.png";
+import aboutImg from "../../assets/about-me_temp.png";
 
 export default function About(props) {
   return (
@@ -9,12 +9,17 @@ export default function About(props) {
         <div className="about__text-content">
           <h3 className="about__title">About the author</h3>
           <p className="about__text">
-            This block describes the project author. Here you should indicate
-            your name, what you do, and which development technologies you know.
+            Hello, my name is Carver. I'm a new software engineer with knowledge
+            in HTML, CSS, JavaScript, and React. I've always loved programming,
+            whether it was making mods for video games, or even trying to make
+            my own games.
             <br />
-            <br />
-            You can also talk about your experience with TripleTen, what you
-            learned there, and how you can help potential customers.
+            <br />I have taken TripleTen's Software Engineer course, which was
+            exactly what I needed to turn my love for programming into a proper
+            skillset and to become a professional software engineer. I now
+            possess the capabilities to turn anyone's ideas or design into a
+            fully functional website, front end and back end, working with them
+            to get down exactly what they want.
           </p>
         </div>
       </div>
