@@ -25,7 +25,7 @@ export default function Main(props) {
 
   return (
     <main className="page__section main">
-      <img className="main__background-img" src={backgroundImageSize} />
+      <img className="main__background-img" src={backgroundImageSize} alt="" />
       <SearchForm
         onSearch={props.onSearch}
         hasSearched={props.hasSearched}

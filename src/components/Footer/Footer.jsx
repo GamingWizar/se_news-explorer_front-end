@@ -28,14 +28,18 @@ export default function Footer(props) {
               href="https://github.com/GamingWizar/se_news-explorer_front-end"
               target="_blank"
             >
-              <img className="footer__button-img" src={gitImg} />
+              <img className="footer__button-img" src={gitImg} alt="git hub" />
             </a>
             <a
               className="footer__facebook"
               href="https://facebook.com"
               target="_blank"
             >
-              <img className="footer__button-img" src={facebookImg} />
+              <img
+                className="footer__button-img"
+                src={facebookImg}
+                alt="facebook"
+              />
             </a>
           </div>
         </>
@@ -50,10 +54,18 @@ export default function Footer(props) {
                 className="footer__git"
                 href="https://github.com/GamingWizar/se_news-explorer_front-end"
               >
-                <img className="footer__button-img" src={gitImg} />
+                <img
+                  className="footer__button-img"
+                  src={gitImg}
+                  alt="git hub"
+                />
               </a>
               <a className="footer__facebook" href="https://facebook.com">
-                <img className="footer__button-img" src={facebookImg} />
+                <img
+                  className="footer__button-img"
+                  src={facebookImg}
+                  alt="facebook"
+                />
               </a>
             </div>
           </div>

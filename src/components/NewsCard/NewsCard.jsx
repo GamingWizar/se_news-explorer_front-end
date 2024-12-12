@@ -7,7 +7,7 @@ export default function NewsCard(props) {
   const DateCalc = new DateCalculator();
   return (
     <div className="news-card">
-      <img className="news-card__image" src={props.details.urlToImage} />
+      <img className="news-card__image" src={props.details.urlToImage} alt="" />
       <div className="news-card__bottom">
         <p className="news-card__date">
           {DateCalc.convertDateToReadable(props.details.publishedAt)}
