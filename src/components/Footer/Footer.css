@@ -3,6 +3,16 @@
   justify-content: space-between;
   padding: 28px 0;
 }
+.footer_layout_desktop {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 28px 0;
+}
+.footer_layout_phone {
+  display: none;
+  flex-direction: column;
+}
 
 .footer__section {
   margin-right: 104px;
@@ -71,6 +81,12 @@
 @media (max-width: 650px) {
   .footer {
     flex-direction: column;
+  }
+  .footer_layout_desktop {
+    display: none;
+  }
+  .footer_layout_phone {
+    display: flex;
   }
   .footer__section {
     margin-right: 18px;
