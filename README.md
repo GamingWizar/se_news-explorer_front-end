@@ -14,7 +14,6 @@ This is the final project of the Web Development program at Triple Ten. It was c
 
 ## Plans to Improve Project
 
-- Update about me section
 - Add front-end form validation to provide better user feedback
 - Display back-end messages so the user can know what is going on if something like an error happens
 - Create and integrate backend to make accounts and save news articles
