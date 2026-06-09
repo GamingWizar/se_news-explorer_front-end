@@ -2,6 +2,10 @@
 
 This is the final project of the Web Development program at Triple Ten. It was created using HTML, CSS, JavaScript, and React, based on the design provided through Figma.
 
+## Project Link
+
+https://news.carverhannasch.com
+
 ## Project features
 
 - Semantic HTML5
